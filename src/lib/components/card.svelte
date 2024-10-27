@@ -1,11 +1,17 @@
 <script lang="ts">
+  interface Props {
+    frontText: string;
+    backText: string;
+  }
+
+  let { frontText, backText }: Props = $props();
   let showBack = $state(false);
 </script>
 
 <div class="card">
   <button class="card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
-    <div class="card-side card-front">Front card</div>
-    <div class="card-side card-back">Back card</div>
+    <div class="card-side card-front">{frontText}</div>
+    <div class="card-side card-back">{backText}</div>
   </button>
 </div>
 

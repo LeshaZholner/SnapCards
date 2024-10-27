@@ -1,5 +1,12 @@
 <script lang="ts">
-  import Card from "$lib/components/card.svelte";
+  import SetCards from '$lib/components/set-cards.svelte';
+  import type { PageData } from './$types';
+
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
   let count = $state(0);
 </script>
 
@@ -7,8 +14,9 @@
 <button onclick={() => count++}>
   Clicks: {count}
 </button>
+
 <div class="card-container">
-  <Card />
+  <SetCards cardList={data.cards} />
 </div>
 
 <style>
