@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition';
   interface Props {
     frontText: string;
     backText: string;
@@ -8,7 +9,7 @@
   let showBack = $state(false);
 </script>
 
-<div class="card">
+<div in:fade class="card">
   <button class="card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
     <div class="card-side card-front">{frontText}</div>
     <div class="card-side card-back">{backText}</div>

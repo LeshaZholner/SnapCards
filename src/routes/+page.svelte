@@ -7,13 +7,7 @@
   }
 
   let { data }: Props = $props();
-  let count = $state(0);
 </script>
-
-<h1>Hello word</h1>
-<button onclick={() => count++}>
-  Clicks: {count}
-</button>
 
 <div class="card-container">
   <SetCards cardList={data.cards} />
