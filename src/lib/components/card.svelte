@@ -9,23 +9,22 @@
   let showBack = $state(false);
 </script>
 
-<div in:fade class="card">
-  <button class="card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
+<div in:fade class="card-wrapper">
+  <button class="card card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
     <div class="card-side card-front">{frontText}</div>
     <div class="card-side card-back">{backText}</div>
   </button>
 </div>
 
-<style>
-
-  .card {
+<style lang="scss">
+  .card-wrapper {
     display: block;
     width: 100%;
     height: 300px;
     perspective: 1000px;
     user-select: none;
     touch-action: none;
-    transition: transform 0.8s;
+    transition: transform 2.8s;
   }
 
   .card-inner {
@@ -34,13 +33,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    text-align: center;
-    border: 1px solid #323232;
-    border-radius: 20px;
-    color: #323232;
-    background-color: #ffffff;
-    font-size: 1.3rem;
-    transition: transform 0.8s;
+    transition: transform 2.8s;
     transform-style: preserve-3d;
   }
 

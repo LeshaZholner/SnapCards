@@ -13,11 +13,11 @@
   <SetCards cardList={data.cards} />
 </div>
 
-<style>
+<style lang="scss">
   .card-container {
     max-width: 800px;
-    height: 300px;
     margin-left: auto;
     margin-right: auto;
+    @include big-font;
   }
 </style>

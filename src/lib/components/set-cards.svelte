@@ -28,11 +28,11 @@
       backText={cardList[currentCardIndex].backText}
     />
   {/key}
-  <button onclick={() =>  {
+  <button class="btn btn-danger" onclick={() =>  {
     leftCardIds.push(currentCardIndex);
     nextCard();
   }}>Don't know</button>
-  <button onclick={() => {
+  <button class="btn btn-success" onclick={() => {
     rightCardIds.push(currentCardIndex);
     nextCard();
   }}>Know</button>
@@ -42,5 +42,5 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
 </style>

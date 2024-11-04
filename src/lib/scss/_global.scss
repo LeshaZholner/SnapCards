@@ -1,0 +1,8 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+@mixin big-font {
+  font-size: 32px;
+  font-weight: 900;
+}
