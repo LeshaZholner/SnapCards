@@ -24,7 +24,7 @@
         <h2>Cards</h2>
         <div class="row">
           <div class="col-12">
-            <div class="row border rounded shadow-sm p-4">
+            <div class="row create-card-item shadow-sm py-4 px-2">
               <div class="col-12">
                 1
               </div>
@@ -44,4 +44,7 @@
 </div>
 
 <style lang="scss">
+  .create-card-item {
+    @include border-radius();
+  }
 </style>

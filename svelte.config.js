@@ -11,7 +11,7 @@ const config = {
         preprocessorOptions: {
           scss: {
             additionalData: `
-              @import "snap-cards/src/lib/scss/_global.scss";
+              @import "snap-cards/src/lib/scss/_components/include";
             `,
           },
         }

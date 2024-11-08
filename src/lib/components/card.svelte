@@ -24,7 +24,7 @@
     perspective: 1000px;
     user-select: none;
     touch-action: none;
-    transition: transform 2.8s;
+    transition: transform .8s;
   }
 
   .card-inner {
@@ -33,7 +33,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    transition: transform 2.8s;
+    transition: transform .8s;
     transform-style: preserve-3d;
   }
 
