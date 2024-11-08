@@ -1,1 +1,25 @@
+// * Color system
+// *******************************************************************************
+$white: #fff !default;
+$black: #22303e !default;
+$gray-25: rgba($black, 0.025) !default;
+$gray-60: rgba($black, 0.06) !default;
+$gray-80: rgba($black, 0.08) !default;
+$gray-100: rgba($black, 0.1) !default;
+$gray-200: rgba($black, 0.12) !default;
+$gray-300: rgba($black, 0.3) !default;
+$gray-400: rgba($black, 0.4) !default;
+$gray-500: rgba($black, 0.5) !default;
+$gray-600: rgba($black, 0.6) !default;
+$gray-700: rgba($black, 0.7) !default;
+$gray-800: rgba($black, 0.8) !default;
+$gray-900: rgba($black, 0.9) !default;
+
+// * Body
+// *******************************************************************************
 $body-bg: #f5f5f9 !default;
+$body-color: $gray-700 !default;
+
+// * Cards
+// *******************************************************************************
+$card-bg: $white !default;
