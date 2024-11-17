@@ -1,25 +1,43 @@
 <script lang="ts">
-    import ThemeToggle from "./theme-toggle.svelte";
-
+  import { page } from '$app/stores';
+  import ThemeToggle from './theme-toggle.svelte';
 </script>
 
 <aside class="text-body-emphasis bg-body-secondary">
   <a class="aside-title link-body-emphasis" href="/">
     <span class="fs-4">Snap Cards</span>
   </a>
-  <hr>
+  <hr />
   <ul class="aside-menu nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link link-body-emphasis" href="/">Home</a>
+      <a
+        class="nav-link"
+        class:link-body-emphasis={$page.url.pathname !== '/'}
+        class:active={$page.url.pathname === '/'}
+        aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+        href="/">Home</a
+      >
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/">My Library</a>
+      <a
+        class="nav-link"
+        class:link-body-emphasis={$page.url.pathname !== '/my-library'}
+        class:active={$page.url.pathname === '/my-library'}
+        aria-current={$page.url.pathname === '/my-library' ? 'page' : undefined}
+        href="/my-library">My Library</a
+      >
     </li>
     <li class="nav-item">
-      <a class="nav-link link-body-emphasis" href="/">Create card set</a>
+      <a
+        class="nav-link"
+        class:link-body-emphasis={$page.url.pathname !== '/create-set'}
+        class:active={$page.url.pathname === '/create-set'}
+        aria-current={$page.url.pathname === '/create-set' ? 'page' : undefined}
+        href="/create-set">Create card set</a
+      >
     </li>
   </ul>
-  <hr>
+  <hr />
   <ThemeToggle />
 </aside>
 
