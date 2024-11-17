@@ -1,5 +1,6 @@
 export interface CardType {
   id: number;
-  frontText: string;
-  backText: string;
+  term: string;
+  definition: string;
+  example: string;
 }

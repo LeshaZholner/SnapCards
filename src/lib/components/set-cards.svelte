@@ -24,8 +24,8 @@
 <div class="set-cards">
   {#key currentCardIndex}
     <Card
-      frontText={cardList[currentCardIndex].frontText}
-      backText={cardList[currentCardIndex].backText}
+      frontText={cardList[currentCardIndex].term}
+      backText={cardList[currentCardIndex].definition}
     />
   {/key}
   <button class="btn btn-danger" onclick={() =>  {
