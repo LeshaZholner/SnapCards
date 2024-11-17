@@ -11,8 +11,8 @@
 
 <div in:fade class="card-wrapper">
   <button class="card card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
-    <div class="card-side card-front">{frontText}</div>
-    <div class="card-side card-back">{backText}</div>
+    <div class="card-body card-side card-front">{frontText}</div>
+    <div class="card-body card-side card-back">{backText}</div>
   </button>
 </div>
 
@@ -35,6 +35,7 @@
     height: 100%;
     transition: transform .8s;
     transform-style: preserve-3d;
+    background-color: var(--bs-tertiary-bg);
   }
 
   .card-side {

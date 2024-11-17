@@ -1,7 +1,9 @@
 <script lang="ts">
+    import ThemeToggle from "./theme-toggle.svelte";
+
 </script>
 
-<aside>
+<aside class="text-body-emphasis bg-body-secondary">
   <a class="aside-title link-body-emphasis" href="/">
     <span class="fs-4">Snap Cards</span>
   </a>
@@ -18,15 +20,17 @@
     </li>
   </ul>
   <hr>
+  <ThemeToggle />
 </aside>
 
 <style lang="scss">
   aside {
     display: flex;
     flex-direction: column;
-    background-color: $white;
     height: 100%;
     padding: 1rem;
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-nav-link-color);
   }
 
   .aside-title {
