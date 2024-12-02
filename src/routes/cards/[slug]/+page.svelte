@@ -19,6 +19,10 @@
 </div>
 
 <style lang="scss">
+  .cards-page {
+    overflow-x: clip;
+  }
+
   .card-container {
     max-width: 800px;
     margin-left: auto;

@@ -21,17 +21,39 @@
 
 <style gloabl lang="scss">
   .layout-container {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    height: 100vh;
-    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 100vh;
+  }
+
+  .layout-page {
+    flex: 1 0 0;
   }
 
   .layout-menu {
     position: sticky;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    align-self: start;
+    bottom: 0;
+    z-index: 101;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .layout-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .layout-page {
+      flex: 0 0 auto;
+      width: 80%;
+    }
+
+    .layout-menu {
+      flex: 0 0 auto;
+      align-self: start;
+      width: 20%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
   }
 </style>
