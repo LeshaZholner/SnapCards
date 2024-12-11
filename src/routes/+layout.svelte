@@ -2,10 +2,13 @@
   import type { Snippet } from 'svelte';
   import { onMount } from 'svelte';
   import Aside from '$lib/components/aside.svelte';
-  import "$lib/scss/app.scss";
+  import '$lib/scss/app.scss';
 
   onMount(async () => {
-    await import('bootstrap');
+    console.log('1')
+    const bootstrap2 = await import('bootstrap');
+    console.log('2')
+    window.bootstrap = bootstrap2;
   });
   let { children }: { children: Snippet } = $props();
 </script>

@@ -4,9 +4,12 @@
   import ThemeToggle from './theme-toggle.svelte';
 
   onMount(async () => {
-    const bootstrap = await import('bootstrap');
+    console.log('a-1');
+    const bootstrap2 = await window.bootstrap;
+    console.log(bootstrap2);
+    console.log('a-2')
     let navBar = document.getElementById('sc-navbar')!;
-    let bsNavBar = bootstrap.Collapse.getOrCreateInstance(navBar, {toggle: false})
+    let bsNavBar = bootstrap2.Collapse.getOrCreateInstance(navBar, {toggle: false})
     let navLinks = Array.from(navBar.getElementsByClassName('nav-link'));
     console.log(navLinks);
     navLinks.forEach((navLink) => {
