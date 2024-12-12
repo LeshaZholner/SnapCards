@@ -37,11 +37,11 @@
     margin-bottom: 1rem;
   }
 
-  .card {
-    box-shadow: $box-shadow-sm;
-  }
+  // .card {
+  //   box-shadow: $box-shadow-sm;
+  // }
 
-  .card:hover {
-    box-shadow: $box-shadow;
-  }
+  // .card:hover {
+  //   box-shadow: $box-shadow;
+  // }
 </style>

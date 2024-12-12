@@ -27,6 +27,5 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    @include big-font;
   }
 </style>
