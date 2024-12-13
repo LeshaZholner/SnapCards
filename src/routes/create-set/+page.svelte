@@ -1,10 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-
-  onMount(async () => {
-    // const bootstrap = await import('bootstrap');
-    // window.bootstrap = bootstrap;
-  });
 </script>
 
 <div class="create-set-page">
@@ -62,9 +56,6 @@
               </div>
             </div>
             <button class="btn btn-outline-primary">
-              <svg class="bi" width="32" height="32" fill="currentColor">
-                <use xlink:href="bootstrap-icons.svg#shop"/>
-              </svg>
               Add Card
             </button>
           </div>
