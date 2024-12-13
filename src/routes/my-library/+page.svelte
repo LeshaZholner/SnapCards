@@ -13,7 +13,7 @@
         <a href="/cards/{setPreview.id}">
           <Card.Content class="p-4">
             <Badge variant="outline">{setPreview.termsCount} terms</Badge>
-            <h4>{setPreview.title}</h4>
+            <h4 class="font-bold">{setPreview.title}</h4>
           </Card.Content>
         </a>
       </Card.Root>

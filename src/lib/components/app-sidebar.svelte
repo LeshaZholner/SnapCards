@@ -1,6 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import House from 'lucide-svelte/icons/house';
+  import FolderOpen from 'lucide-svelte/icons/folder-open';
+  import FilePlus from 'lucide-svelte/icons/file-plus';
   import WalletCards from 'lucide-svelte/icons/wallet-cards';
   import * as Sidebar from '$lib/components/ui/sidebar';
 
@@ -15,12 +17,12 @@
     {
       title: 'MyLibrary',
       url: '/my-library',
-      icon: House
+      icon: FolderOpen
     },
     {
       title: 'Create card set',
       url: '/create-set',
-      icon: House
+      icon: FilePlus
     }
   ];
 </script>
