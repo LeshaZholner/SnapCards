@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
+  import { ModeWatcher } from 'mode-watcher';
   import AppSidebar from '$lib/components/app-sidebar.svelte';
   import * as Avatar from '$lib/components/ui/avatar';
   import * as Sidebar from "$lib/components/ui/sidebar";
@@ -9,6 +10,7 @@
 </script>
 
 <Sidebar.Provider>
+  <ModeWatcher />
   <AppSidebar />
   <Sidebar.Inset>
     <header class="flex h-16 shrink-0 items-center justify-between border-b px-4">
@@ -23,5 +25,5 @@
   </Sidebar.Inset>
 </Sidebar.Provider>
 
-<style gloabl lang="scss">
+<style>
 </style>

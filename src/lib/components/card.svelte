@@ -16,7 +16,7 @@
   </button>
 </div>
 
-<style lang="scss">
+<style>
   .card-wrapper {
     display: block;
     width: 100%;

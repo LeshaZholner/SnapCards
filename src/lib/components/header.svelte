@@ -70,5 +70,5 @@
   </nav>
 </header>
 
-<style lang="scss">
+<style>
 </style>

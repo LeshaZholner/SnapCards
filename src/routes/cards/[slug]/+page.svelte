@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   .cards-page {
     overflow-x: clip;
   }

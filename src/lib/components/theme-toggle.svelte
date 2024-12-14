@@ -1,15 +1,18 @@
 <script lang="ts">
-  let isDark = $state(false)
-  $effect(() => {
-    console.log(isDark);
-    document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
-  });
+  import Sun from 'lucide-svelte/icons/sun';
+  import Moon from 'lucide-svelte/icons/moon';
+  import { toggleMode } from 'mode-watcher';
+  import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
-<div class="form-check form-switch">
-  <input class="form-check-input" bind:checked={isDark} type="checkbox" role="switch" id="sc-color-theme">
-</div>
+<Button onclick={() => toggleMode()} variant="outline" size="icon">
+  <Sun
+    class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+  />
+  <Moon
+    class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+  />
+</Button>
 
-<style lang="scss">
-
+<style>
 </style>

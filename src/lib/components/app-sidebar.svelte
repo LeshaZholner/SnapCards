@@ -5,6 +5,7 @@
   import FilePlus from 'lucide-svelte/icons/file-plus';
   import WalletCards from 'lucide-svelte/icons/wallet-cards';
   import * as Sidebar from '$lib/components/ui/sidebar';
+    import ThemeToggle from './theme-toggle.svelte';
 
   const sidebar = Sidebar.useSidebar();
 
@@ -66,8 +67,10 @@
       </Sidebar.GroupContent>
     </Sidebar.Group>
   </Sidebar.Content>
-  <Sidebar.Footer />
+  <Sidebar.Footer>
+    <ThemeToggle />
+  </Sidebar.Footer>
 </Sidebar.Root>
 
-<style lang="scss">
+<style>
 </style>
