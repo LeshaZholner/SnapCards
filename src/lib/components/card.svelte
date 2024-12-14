@@ -1,5 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import * as Card from '$lib/components/ui/card';
+
   interface Props {
     frontText: string;
     backText: string;
@@ -9,18 +11,24 @@
   let showBack = $state(false);
 </script>
 
-<div in:fade class="card-wrapper">
-  <button class="card card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)}>
-    <div class="card-body card-side card-front">{frontText}</div>
-    <div class="card-body card-side card-back">{backText}</div>
+<div in:fade class="card-wrapper w-full h-72">
+  <button class="card-inner" class:show-back={showBack} onclick={() => (showBack = !showBack)} >
+    <Card.Root class="absolute top-0 flex justify-center w-full h-full [backface-visibility:hidden]">
+      <Card.Content class="flex justify-center items-center w-full h-full">
+        {frontText}
+      </Card.Content>
+    </Card.Root>
+    <Card.Root class="absolute top-0 flex justify-center w-full h-full [transform:rotateX(180deg)] [backface-visibility:hidden]">
+      <Card.Content class="flex justify-center items-center w-full h-full">
+        {backText}
+      </Card.Content>
+    </Card.Root>
   </button>
 </div>
 
 <style>
   .card-wrapper {
     display: block;
-    width: 100%;
-    height: 300px;
     perspective: 1000px;
     user-select: none;
     touch-action: none;
@@ -29,28 +37,10 @@
 
   .card-inner {
     position: relative;
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: 100%;
     transition: transform .8s;
     transform-style: preserve-3d;
-    background-color: var(--bs-tertiary-bg);
-  }
-
-  .card-side {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card-back {
-    transform: rotateX(180deg);
   }
 
   .show-back {

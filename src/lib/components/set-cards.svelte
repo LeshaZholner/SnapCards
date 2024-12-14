@@ -1,6 +1,7 @@
 <script lang="ts">
   import Card from './card.svelte';
   import type { CardType } from '$lib/types/card-type';
+  import { Button } from '$lib/components/ui/button';
 
   interface Props {
     cardList: CardType[];
@@ -28,17 +29,23 @@
       backText={cardList[currentCardIndex].definition}
     />
   {/key}
-  <button class="btn btn-danger" onclick={() =>  {
-    leftCardIds.push(currentCardIndex);
-    nextCard();
-  }}>Don't know</button>
-  <button class="btn btn-success" onclick={() => {
-    rightCardIds.push(currentCardIndex);
-    nextCard();
-  }}>Know</button>
-  <div>
-    know - {rightCardIds.length}
-    don't know - {leftCardIds.length}
+  <div class="my-2">
+    <Button variant="destructive" onclick={() =>{
+      leftCardIds.push(currentCardIndex);
+      nextCard();
+    }}>
+      Don't know
+    </Button>
+    <Button onclick={() =>{
+      rightCardIds.push(currentCardIndex);
+      nextCard();
+    }}>
+      Know
+    </Button>
+    <div>
+      don't know - {leftCardIds.length}
+      know - {rightCardIds.length}
+    </div>
   </div>
 </div>
 
