@@ -1,66 +1,73 @@
 <script lang="ts">
+  import { Input } from '$lib/components/ui/input';
+  import { Label } from '$lib/components/ui/label';
+  import { Textarea } from '$lib/components/ui/textarea';
+  import { Button } from '$lib/components/ui/button';
+  import { Separator } from '$lib/components/ui/separator';
+  import CirclePlus from 'lucide-svelte/icons/plus';
+
 </script>
 
 <div class="create-set-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="card bg-body-tertiary mb-3">
-          <div class="card-body ">
-            <h4>Create a new card set</h4>
-          </div>
+  <div class="space-y-6">
+    <h2 class="text-3xl font-medium">Create a new card set</h2>
+    <Separator />
+    <div class="mb-3 p-3 rounded-md border bg-secondary">
+      <div class="mb-3">
+        <Label for="field-set-title">Title</Label>
+        <Input id="field-set-title" placeholder="Card title, e.g. 'English - irregular verbs'" />
+      </div>
+      <div>
+        <Label for="field-set-description">Description</Label>
+        <Textarea id="field-set-description" placeholder="Add a descrtion" />
+      </div>
+    </div>
+    <Separator />
+    <div>
+      <div class="flex gap-3 mb-3 p-3 rounded-md border bg-secondary">
+        <div class="flex-1">
+          <Label for="field-set-card-term-1">Term</Label>
+          <Textarea id="field-set-card-term-1" placeholder="Add a Term" />
         </div>
-        <div class="card bg-body-tertiary mb-3">
-          <div class="card-header">
-            <h5>General Info</h5>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-floating mb-3">
-                  <input id="field-set-title" class="form-control" type="text" placeholder="Card title, e.g. 'English - irregular verbs'"/>
-                  <label for="field-set-title">Title</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating mb-3">
-                  <textarea id="field-set-description" class="form-control" placeholder="Add a descrtion" ></textarea>
-                  <label for="field-set-description">Description</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-body-tertiary mb-3">
-          <div class="card-header">
-            <h5>Cards</h5>
-          </div>
-          <div class="card-body">
-            <div class="border rounded-1 bg-body mb-3 p-3">
-              <div class="row">
-                <div class="col-12">
-                  1
-                </div>
-                <div class="col-6">
-                  <div class="form-floating">
-                    <textarea id="field-set-card-term-1" class="form-control" placeholder="Term"></textarea>
-                    <label for="field-set-card-term-1">Term</label>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="form-floating">
-                    <textarea id="field-set-card-def-1" class="form-control" placeholder="Definition"></textarea>
-                    <label for="field-set-card-def-1">Definition</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-outline-primary">
-              Add Card
-            </button>
-          </div>
+        <div class="flex-1">
+          <Label for="field-set-card-def-1">Definition</Label>
+          <Textarea id="field-set-card-def-1" placeholder="Add a Definition" />
         </div>
       </div>
+      <div class="flex gap-3 mb-3 p-3 rounded-md border bg-secondary">
+        <div class="flex-1">
+          <Label for="field-set-card-term-1">Term</Label>
+          <Textarea id="field-set-card-term-1" placeholder="Add a Term" />
+        </div>
+        <div class="flex-1">
+          <Label for="field-set-card-def-1">Definition</Label>
+          <Textarea id="field-set-card-def-1" placeholder="Add a Definition" />
+        </div>
+      </div>
+      <div class="flex gap-3 mb-3 p-3 rounded-md border bg-secondary">
+        <div class="flex-1">
+          <Label for="field-set-card-term-1">Term</Label>
+          <Textarea id="field-set-card-term-1" placeholder="Add a Term" />
+        </div>
+        <div class="flex-1">
+          <Label for="field-set-card-def-1">Definition</Label>
+          <Textarea id="field-set-card-def-1" placeholder="Add a Definition" />
+        </div>
+      </div>
+      <div class="flex gap-3 mb-3 p-3 rounded-md border bg-secondary">
+        <div class="flex-1">
+          <Label for="field-set-card-term-1">Term</Label>
+          <Textarea id="field-set-card-term-1" placeholder="Add a Term" />
+        </div>
+        <div class="flex-1">
+          <Label for="field-set-card-def-1">Definition</Label>
+          <Textarea id="field-set-card-def-1" placeholder="Add a Definition" />
+        </div>
+      </div>
+      <Button>
+        <CirclePlus />
+        Add card
+      </Button>
     </div>
   </div>
 </div>
