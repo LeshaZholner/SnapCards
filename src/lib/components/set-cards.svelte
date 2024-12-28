@@ -8,7 +8,7 @@
   }
 
   let { cardList }: Props = $props();
-  let currentCardIndex = $state(cardList[0].id);
+  let currentCardIndex = $state(0);
   let leftCardIds: number[] = $state([]);
   let rightCardIds: number[] = $state([]);
   let currentSetCardIds: number[] = $state([]);

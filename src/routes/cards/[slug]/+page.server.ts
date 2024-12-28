@@ -8,7 +8,8 @@ export const load: PageServerLoad = async ({ params }): Promise<{ set: SetType; 
   const cardSet = await prisma.cardSet.findUnique({
     where: { id: Number(params.slug)},
     include: { cards: true },
-  })
+  });
+
   if (cardSet === undefined || cardSet === null) {
     throw error(404, "CardSet not found");
   }
